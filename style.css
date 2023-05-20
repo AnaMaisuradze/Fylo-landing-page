@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open sans', sans-serif;
+    color: hsl(243, 87%, 12%);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.green {
+    color: rgb(123, 176, 123);
+}
+
+
+.flex > div,
+.flex > ul {
+    flex: 1;
+}
+
+.flex > div:first-child {
+    margin-right: 20px;
+}
+
+.flex > div:last-child {
+    margin-left: 20px;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 50px;
+}
+
+nav ul a {
+    font-family: 'Raleway', sans-serif;
+    color: hsl(243, 87%, 12%);
+    text-decoration: none;
+}
+
+/* form */
+
+form {
+    display: flex;
+}
+
+input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    border: 1px solid hsl(243, 87%, 12%);
+    border-radius: 2px;
+    padding: 15px;
+    flex: 0.7;
+}
+
+input::placeholder {
+    color: hsl(0, 0%, 75%);
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid hsl(224, 93%, 58%);
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 15px;
+    flex: 0.3;
+    margin-left: 10px;
+}
+
+.light-purple {
+    background-color: hsl(240, 75%, 98%);
+    margin-top: 100px;
+    position: relative;
+    padding: 50px 0;
+}
+
+.light-purple::after {
+    content: "";
+    background-image: url(./images/bg-curve-desktop.svg);
+    background-size: cover;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    height: 65px;
+    width: 100%;
+}
+
+/* testimonial */
+
+.testimonial-box {
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.testimonial-box p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.user-information {
+    display: flex;
+    margin-top: 20px;
+}
+
+.user-information img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.user-information h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* grey-blue */
+
+.grey-blue {
+    background-color:hsl(238, 22%, 44%);
+    color: white;
+    padding: 50px 0;
+}
+
+.grey-blue input {
+    flex: 1;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+.grey-blue form {
+    flex-direction: column;
+    border: none;
+}
+
+.grey-blue button {
+    width: 50%;
+    margin: 10px 0;
+}
+
+/* footer */
+
+footer {
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+    padding: 50px 0;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li {
+	margin-bottom: 20px;
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .circle {
+	border: 1px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+	height: 40px;
+	width: 40px;
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+	body {
+		text-align: center;
+	}
+
+	nav {
+		flex-direction: column;
+		margin: 10px 0;
+	}
+
+	nav ul li {
+		margin: 10px 20px;
+	}
+
+	.light-purple::before {
+		background-image: url('./images/bg-curve-mobile.svg');
+		height: 80px;
+	}
+
+	.flex {
+		flex-direction: column;
+	}
+
+	.flex > div {
+		width: 100%;
+	}
+
+	.flex > div:first-child {
+		margin-right: 0;
+	}
+
+	.flex > div:last-child {
+		margin-left: 0;
+	}
+
+	.testimonial-box {
+		width: 100%;
+	}
+
+	.grey-blue form input {
+		flex: 1;
+	}
+
+	.grey-blue form button {
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	.illustration {
+		margin-top: 30px;
+	}
+
+	.user-information {
+		justify-content: center;
+	}
+
+	footer ul {
+		padding: 0;
+		width: 100%;
+	}
+}
